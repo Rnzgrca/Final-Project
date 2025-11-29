@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renz | Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: black;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+            z-index: 10;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #a437d3;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 120px 100px 60px;
+            text-align: center;
+        }
+
+        h1.section-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        #home {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            padding: 120px 100px;
+            gap: 50px;
+        }
+
+        .home-content {
+            flex: 1;
+        }
+
+        .home-image img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: none;
+            box-shadow: 0 0 20px #a437d3; 
+            animation: fadeIn 2s ease;
+        }
+
+        #home img {
+            margin-bottom: 0;
+        }
+
+        #home button {
+            margin-top: 25px;
+            padding: 15px 30px;
+            background: #a437d3;
+            border: none;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            animation: bounce 1.5s infinite;
+            color: white;
+        }
+
+        @keyframes bounce {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        
+        @media (max-width: 768px) {
+            #home {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .home-content {
+                text-align: center;
+            }
+        }
+
+        .about-text {
+            width: 70%;
+            margin: auto;
+            font-size: 1.2rem;
+            line-height: 1.7;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            width: 70%;
+            margin: auto;
+            font-size: 1.3rem;
+        }
+
+        .skill-box {
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+
+        .projects {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .project-card {
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.08);
+            box-shadow: 0 0 10px rgba(255,255,255,0.2);
+        }
+
+        .project-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        #contact button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: #ff4d9e;
+            border: none;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.07); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<nav>
+    <h2>Renz Portfolio</h2>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#social-links">Social Links</a>
+        <a href="#projects">Projects</a>
+        <a href="#Shows">Shows</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+
+<section id="home">
+    <div class="home-content">
+        <h1 class="section-title" data-aos="fade-down">Hey, I'm Renz Amielton Garcia</h1>
+        <p data-aos="fade-up">I'm 20 years old and 3rd Year Student.</p>
+        <p data-aos="fade-up">Certified One Piece Fan and Friendly-Rivalry Fan</p>
+
+    </div>
+
+    <div class="home-image">
+        <img src="images/Best Picture.jpg" alt="Profile">
+    </div>
+</section>
+
+<section id="about">
+    <h1 class="section-title" data-aos="fade-up">About Me</h1>
+    <p class="about-text" data-aos="fade-right">
+        I study at Philippine Christian University and Im now on my 3rd Year student constantly improving
+        my skills in front-end, design, and full-stack development.
+    </p>
+</section>
+
+<section id="social-links">
+    <h1 class="section-title" data-aos="zoom-in">Social Links</h1>
+
+    <div class="skills-grid">
+
+        <div class="skill-box" data-aos="fade-up">
+            <a href="https://www.facebook.com/rnzgrca/" target="_blank" style="color:white; text-decoration:none;">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/facebook.svg" width="25" style="vertical-align:middle; margin-right:5px;">
+                Facebook
+            </a>
+        </div>
+
+        <div class="skill-box" data-aos="fade-up">
+            <a href="https://www.instagram.com/rnzgca/" target="_blank" style="color:white; text-decoration:none;">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/instagram.svg" width="25" style="vertical-align:middle; margin-right:5px;">
+                Instagram
+            </a>
+        </div>
+
+        <div class="skill-box" data-aos="fade-up">
+            <a href="https://x.com/Rnzgrca" target="_blank" style="color:white; text-decoration:none;">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/x.svg" width="25" style="vertical-align:middle; margin-right:5px;">
+                X
+            </a>
+        </div>
+
+        <div class="skill-box" data-aos="fade-up">
+            <a href="https://www.tiktok.com/@rnzgrca?lang=en" target="_blank" style="color:white; text-decoration:none;">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/tiktok.svg" width="25" style="vertical-align:middle; margin-right:5px;">
+                TikTok
+            </a>
+        </div>
+
+        <div class="skill-box" data-aos="fade-up">
+            <a href="https://www.threads.net/@rnzgrca" target="_blank" style="color:white; text-decoration:none;">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/threads.svg" width="25" style="vertical-align:middle; margin-right:5px;">
+                Threads
+            </a>
+        </div>
+
+        <div class="skill-box" data-aos="fade-up">
+            <a href="mailto:yourEmail@gmail.com" target="_blank" style="color:white; text-decoration:none;">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/gmail.svg" width="25" style="vertical-align:middle; margin-right:5px;">
+                Email
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+
+<section id="projects">
+    <h1 class="section-title" data-aos="zoom-in">Projects</h1>
+
+    <div class="projects">
+        <div class="project-card" data-aos="flip-left">
+            <img src="images/Screenshot(2).jpg">
+            <h3>PCU Enrollment Form</h3>
+            <p>This is where I first learned about on how to code a Enrollment Form.</p>
+        </div>
+
+        <div class="project-card" data-aos="flip-up">
+            <img src="images/Screenshot(1).jpg">
+            <h3>Birth Month</h3>
+            <p>This is where I learned about on how to code a birth month.</p>
+        </div>
+    </div>
+</section>
+
+<section id="Shows">
+    <h1 class="section-title" data-aos="zoom-in">My Shows (Anime & K-Dramas)</h1>
+
+    <div class="projects">
+        <div class="project-card" data-aos="flip-left">
+            <a href="https://9animetv.to/watch/one-piece-100?ep=2142" target="_blank" style="text-decoration:none; color:white;">
+                <img src="images/One Piece.jpg" alt="One Piece">
+                <h3>One Piece</h3>
+            </a>
+        </div>
+
+        <div class="project-card" data-aos="flip-up">
+            <a href="https://9animetv.to/watch/call-of-the-night-18041?ep=92608" target="_blank" style="text-decoration:none; color:white;">
+                <img src="images/Call of the Night.png" alt="Call of the Night">
+                <h3>Call of the Night</h3>
+            </a>
+        </div>
+
+        <div class="project-card" data-aos="flip-right">
+            <a href="https://kisskh.co/Drama/HyeMiLeeYeChaePa/Episode-1?id=7158&ep=121583&page=0&pageSize=100" target="_blank" style="text-decoration:none; color:white;">
+                <img src="images/HYEMILEEYECHAEPA.jpg" alt="HyeMiLeeYeChaePa">
+                <h3>HyeMiLeeYeChaePa</h3>
+            </a>
+        </div>
+
+        <div class="project-card" data-aos="flip-left">
+            <a href="https://kisskh.co/Drama/Friendly-Rivalry/Episode-1?id=10160&ep=174828&page=0&pageSize=100" target="_blank" style="text-decoration:none; color:white;">
+                <img src="images/Friendly Rivalry.jpg" alt="Friendly Rivalry">
+                <h3>Friendly Rivalry</h3>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h1 class="section-title" data-aos="fade-down">Contact Me</h1>
+    <p data-aos="fade-right">Let's work together! Reach out on my socials:</p>
+
+    <button onclick="window.open('https://www.facebook.com/rnzgrca/', '_blank')">
+        Message Me
+    </button>
+</section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>AOS.init();</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script>
+    particlesJS.load("particles-js", "https://cdn.jsdelivr.net/npm/particles.js/demo/particles.json");
+</script>
+
+</body>
+</html>
